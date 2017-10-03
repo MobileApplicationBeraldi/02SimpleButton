@@ -13,17 +13,17 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
-        Button btn = (Button) findViewById(R.id.button2);
+        Button btn = (Button) findViewById(R.id.button1);
         //btn.setOnClickListener(new listener());
         btn.setOnClickListener(this);
     }
 
     public void btnClicked(View view) {
-        Button btn = (Button) findViewById(R.id.button);
+        Button btn = (Button) findViewById(R.id.button2);
                 btn.setText("OK");
-        Toast.makeText(this,"btn 1 clicked....",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"btn 2 clicked....",Toast.LENGTH_SHORT).show();
     }
 
     class listener implements Button.OnClickListener{
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(getApplication().getApplicationContext(),"btn clicked....",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplication().getApplicationContext(),"btn 1 clicked....",Toast.LENGTH_SHORT).show();
 
     }
 }
